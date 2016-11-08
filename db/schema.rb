@@ -52,14 +52,14 @@ ActiveRecord::Schema.define(version: 20161108095927) do
   end
 
   create_table "transactions", force: :cascade do |t|
-    t.datetime "datetime",                                   null: false
-    t.integer  "idTypeTransaction",                          null: false
-    t.decimal  "amount",            precision: 13, scale: 2, null: false
-    t.integer  "account_id",                                 null: false
+    t.datetime "datetime",                                             null: false
+    t.integer  "idTypeTransaction",                                    null: false
+    t.decimal  "amount",                      precision: 13, scale: 2, null: false
+    t.integer  "account_id",        limit: 8,                          null: false
     t.integer  "merchant_id"
-    t.decimal  "tCommission",       precision: 13, scale: 2
-    t.datetime "created_at",                                 null: false
-    t.datetime "updated_at",                                 null: false
+    t.decimal  "tCommission",                 precision: 13, scale: 2
+    t.datetime "created_at",                                           null: false
+    t.datetime "updated_at",                                           null: false
   end
 
   add_index "transactions", ["account_id"], name: "index_transactions_on_account_id", using: :btree
