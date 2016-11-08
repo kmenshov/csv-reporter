@@ -4,8 +4,8 @@ class CreateTransactions < ActiveRecord::Migration
       t.datetime :datetime, null: false
       t.integer :idTypeTransaction, null: false
       t.decimal :amount, precision: 13, scale: 2, null: false
-      t.account :references, null: false
-      t.merchant :references
+      t.references :account, index: true, foreign_key: true, null: false
+      t.references :merchant, index: true, foreign_key: true
       t.decimal :tCommission, precision: 13, scale: 2
 
       t.timestamps null: false
