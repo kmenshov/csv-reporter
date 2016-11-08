@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mEmail: MyString
+  mName: MyString
+  commissionRate: 9.99
+
+two:
+  mEmail: MyString
+  mName: MyString
+  commissionRate: 9.99
