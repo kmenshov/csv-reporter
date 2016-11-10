@@ -9,8 +9,8 @@ default: &default
   encoding: unicode
   pool: 5
 #  template: template0
-  username: <%= ENV['USERNAME'] %>
-  password: <%= ENV['PASSWORD'] %>
+  username: <%= ENV['USER'] %>
+  password: password
   host:     <%= ENV['IP'] %>
 
 development:
